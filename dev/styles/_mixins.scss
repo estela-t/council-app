@@ -1,0 +1,18 @@
+
+@mixin headingStyle ($font-size) {
+	font-family: $bodyFont;
+	font-size: $font-size;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 3px;
+	position: relative;
+	&:after {
+		content:"";
+		display: block;
+		height: 5px;
+		width: 50px;
+		background: $mainBlue;
+		position: absolute;
+		bottom: -10%;
+	}
+}

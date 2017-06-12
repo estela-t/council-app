@@ -1,0 +1,119 @@
+@import 'setup';
+@import 'variables';
+@import 'mixins';
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+// HEADER ****
+header {
+	height: 100vh;
+	display: flex;
+	// justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	background-image: url("/public/assets/city-hall.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	h1 {
+		font-family: $bodyFont;
+		font-weight: 700;
+		font-size: 50px;
+		background: white;
+		padding: 10px;
+		border: 10px solid $mainBlue;
+		margin-top: 200px;
+		// text-shadow: 3px 3px 0 $secondaryBlue;
+		box-shadow: 5px 5px 0 $secondaryBlue;
+	}
+	.navContainer {
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		justify-content: space-around;
+		.nav {
+			padding: 15px 20px;
+			font-family: $bodyFont;
+			text-transform: uppercase;
+			border: 5px dashed $mainRed;
+			background: white;
+			transition: all 0.3s ease;
+			margin-top: 150px;
+			
+			&:hover {
+				border: 5px solid $mainRed;
+				background: $mainRed;
+			
+			}
+			&:hover a {
+				color: white;
+			}
+			a {
+				text-decoration: none;
+				color: $mainRed;
+				font-weight: 700;
+				letter-spacing: 1px;
+				padding: 15px 10px;
+				cursor: pointer;
+			}
+		}
+	}
+
+}
+
+// MAIN ****
+ main {
+ 	h2 {
+ 		@include headingStyle (26px);
+ 		margin-top: 50px;
+ 	}
+ 	.mapContainer {
+ 		.map {
+			width: 60%;
+			display: block;
+			margin: 0 auto;
+ 		}
+ 	}
+ }
+
+// COUNCILLOR DETAILS ****
+
+.councillorContact {
+	h3 {
+		@include headingStyle (18px);
+	}
+	p {
+		font-family: $bodyFont;
+		text-transform: uppercase;
+		font-size: 14px;
+		i {
+			margin-right: 10px;
+		}
+	}
+}
+
+// FORM ****
+.meetingForm {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	padding: 40px 30px;
+	label {
+		font-family: $bodyFont;
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+
+	input [type=submit] {
+		background: linear-gradient(var(--gradientAngle), var(--gradientStart),var(--gradientStop));
+		--gradientAngle: 60deg;
+		--gradientStart: $mainBlue;
+		--gradientStop: $secondaryBlue;
+		&:hover {
+			--gradientAngle: 0deg;
+		}
+	}
+}
+
+// font-family: 'Heebo', sans-serif;
