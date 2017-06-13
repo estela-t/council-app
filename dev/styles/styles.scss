@@ -68,7 +68,7 @@ header {
  main {
  	h2 {
  		@include headingStyle (26px);
- 		margin-top: 50px;
+ 		margin-top: 100px;
  	}
  	.mapContainer {
  		.map {
@@ -78,6 +78,16 @@ header {
  		}
  	}
  }
+
+.councillorButton {
+	font-family: $bodyFont;
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin: 5px;
+	border: none;
+	border: 3px solid $secondaryBlue;
+	background: white;
+}
 
 // COUNCILLOR DETAILS ****
 

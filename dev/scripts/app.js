@@ -7,11 +7,12 @@ import {
 	Route
 } from 'react-router-dom';
 import { Timeline } from 'react-twitter-widgets';
+import {animateScroll as scroll} from 'react-scroll';
 import Form from './form.js';
 
 class CouncilList extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			councillors: [],
 			key: ""
@@ -33,17 +34,30 @@ class CouncilList extends React.Component {
 			// console.log(this.state);
 		});
 	}
-	render(){
-		let list = this.state.councillors.map((singleCouncil, index) => {
 
+	scrollToTop() {
+		scroll.scrollToTop();
+	}
+
+	render(){
+
+		let list = this.state.councillors.map((singleCouncil, index) => {
 			// console.log(singleCouncil.District_ID);
 			return (
 				<Link to={`/councillor/${singleCouncil.District_ID}`} key={`councillor-${index}`}>
-					<button key={singleCouncil.First_name}>{singleCouncil.First_name}</button>
+					<button key={singleCouncil.First_name} className="councillorButton">{singleCouncil.District_ID} - {singleCouncil.First_name} {singleCouncil.Last_name}</button>
 				</Link>
 			)
 		});
 		return(
+			<div>
+			<header>
+				<h1>City Council Meet</h1>
+				<div className="navContainer">
+					<button className="nav"><a href="#main">Find Your Councillor</a></button>
+					<button className="nav"><a href="http://app.toronto.ca/tmmis/meetingCalendarView.do?function=meetingCalendarView" target="_blank">Upcoming Council Meetings</a></button>
+				</div>
+			</header>
 			<main id="main">
 				<div className="wrapper">
 					<h2>Toronto Wards</h2>
@@ -54,6 +68,10 @@ class CouncilList extends React.Component {
 					{ list }
 				</div>
 			</main>
+			<footer><p>Councillor information and <i class="fa fa-camera" aria-hidden="true"></i> courtesy of City of Toronto.</p>
+			<a onClick={this.scrollToTop} id="toTop">To top^</a>
+			</footer>
+			</div>
 		)
 	}
 }
@@ -79,14 +97,16 @@ class CouncillorDetails extends React.Component {
 		console.log(commentList);
 		});
 		// console.log('params thing: ', this.props.match.params.districtid);
-		commentArray = [];
-		for (let key in commentList) {
-			commentArray.push(commentList[key]);
+		const commentArray = [];
+		for (let key in this.state.commentList) {
+			commentArray.push(this.state.commentList[key]);
 		}
 		this.setState({
 				commentList: commentArray
 			});
+		console.log(commentArray);
 	}
+
 	render() {
 		const twitterButton = () => {
 			if (this.state.councillor.Twitter !== "") {
@@ -95,7 +115,7 @@ class CouncillorDetails extends React.Component {
 			)
 			}
 		}
-		console.log(this.state.councillor.Twitter);
+		// console.log(this.state.councillor.Twitter);
 		return (
 			<div className="wrapper">
 					<img src={this.state.councillor.Photo_URL}/>
@@ -124,13 +144,7 @@ class App extends React.Component {
 		return (
 			<Router>
 				<div>
-					<header>
-						<h1>City Council Meet</h1>
-						<div className="navContainer">
-							<button className="nav"><a href="#main">Find Your Councillor</a></button>
-							<button className="nav"><a href="http://app.toronto.ca/tmmis/meetingCalendarView.do?function=meetingCalendarView" target="_blank">Upcoming Council Meetings</a></button>
-						</div>
-					</header>
+
 					<Route exact path="/" component={CouncilList} />
 					<Route path="/councillor/:districtid" component={CouncillorDetails} />
 				</div>
