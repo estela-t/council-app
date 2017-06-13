@@ -68,9 +68,21 @@ class CouncilList extends React.Component {
 					{ list }
 				</div>
 			</main>
-			<footer><p>Councillor information and <i class="fa fa-camera" aria-hidden="true"></i> courtesy of City of Toronto.</p>
-			<a onClick={this.scrollToTop} id="toTop">To top^</a>
-			</footer>
+				<footer>
+					<div className="wrapper">
+						<div>
+							<p>Designed and built by Estela T.</p>
+								<span className="social">
+									<i className="fa fa-twitter" aria-hidden="true"></i>
+									<i className="fa fa-instagram" aria-hidden="true"></i>
+									<i className="fa fa-linkedin" aria-hidden="true"></i>
+								</span>
+							<p className="attribution">Councillor <i className="fa fa-camera" aria-hidden="true"></i>s courtesy of the City of Toronto. City Hall icon by Andrew Youk of Noun Project.</p>
+						</div>
+						<a onClick={this.scrollToTop} id="toTop">Back to top  <i className="fa fa-chevron-up" aria-hidden="true"></i></a>
+					</div>
+				</footer>
+			
 			</div>
 		)
 	}

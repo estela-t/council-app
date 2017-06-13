@@ -126,4 +126,40 @@ header {
 	}
 }
 
+// FOOTER ****
+
+footer {
+	margin-top: 100px;
+	background-color: $mainBlue;
+	color: white;
+	font-family: $bodyFont;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	display: flex;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		a {
+			cursor: pointer;
+			margin-top: 14px;
+		}
+		span {
+			text-align: right;
+			display: block;
+			i {
+				text-align: right;
+				font-size: 24px;
+				margin-left: 10px;
+			}
+		}
+		.attribution {
+			border-top: 1px solid white;
+			font-size: 12px;
+			padding-top: 15px;
+			margin-top: 0;
+		}
+	}
+}
+
 // font-family: 'Heebo', sans-serif;
