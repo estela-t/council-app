@@ -1,0 +1,149 @@
+
+// FORM ****
+.meetingForm {
+	box-shadow: 0 0 3px 0 $secondaryBlue;
+	padding: 30px 20px;
+	width: 50%;
+	margin: 0 auto;
+	.formRow {
+		display: flex;
+		justify-content: space-around;
+	}
+	.inputContainer {
+		margin: 5px;
+		width: 50%;
+		label {
+			@include formType (14px);
+			display: block;
+		}	
+		input {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-bottom: 2px solid $secondaryBlue;
+			text-align: center;
+			&::placeholder {
+				font-family: $bodyFont;
+				font-size: 12px;
+				
+			}
+		}
+		select {
+			width: 100%;
+			border: 1px solid transparent;
+			padding: 10px;
+			-webkit-appearance: none;
+			border-radius: 0px;
+			background: white;
+			border: 2px solid $secondaryBlue;
+			text-align: center;
+			&::placeholder {
+				font-family: $bodyFont;
+				font-size: 12px;
+			}
+		}
+	}
+		.notesContainer {
+			width: 100%;
+			// height: 50%;
+			margin-top: 20px;
+		textarea {
+			width: 100%;
+			height: 100%;
+			&::placeholder {
+				font-family: $bodyFont;
+				font-size: 12px;
+			}
+		}
+		label {
+			@include formType (14px);
+			display: block;
+		}	
+	}
+	input[type="date"] {
+		border: 2px solid $secondaryBlue;
+		&::-webkit-inner-spin-button {
+			display: none;
+		}
+		&::-webkit-calendar-picker-indicator {
+			background: $secondaryBlue;
+		}
+	}
+	.submitContainer {
+		text-align: center;
+
+		input[type="submit"] {
+			margin-top: 15px;
+			text-align: center;
+			width: 30%;
+			padding: 10px;
+			border: 3px solid $secondaryBlue;
+			cursor: cell;
+			@include formType (16px);
+			font-weight: 700;
+			letter-spacing: 2px;
+			color: white;
+			background: linear-gradient(var(--gradientAngle), var(--gradientStart),var(--gradientStop));
+			--gradientAngle: 60deg;
+			--gradientStart: $mainBlue;
+			--gradientStop: $secondaryBlue;
+			transition: all 0.3s ease;
+			&:hover {
+				--gradientAngle: 0deg;
+			}
+		}
+	}
+}
+
+
+// MEDIA QUERIES ****
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.meetingForm {
+		.formRow {
+			display: block;
+		}
+		.inputContainer {
+			margin: 5px;
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.meetingForm {
+		width: 90%;
+		.formRow {
+			display: flex;
+			justify-content: space-around;
+		}
+		.inputContainer {
+			width: 50%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.meetingForm {
+		width: 90%;
+		.formRow {
+			display: flex;
+			flex-direction: column;
+		}
+		.inputContainer {
+			width: 100%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}

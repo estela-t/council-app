@@ -49,35 +49,50 @@ class Form extends React.Component {
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit} className="meetingForm">
+				<div className="formRow">
+					<div className="dateContainer inputContainer">
+						<label htmlFor="date">Meeting Date</label>
+						<input type="date" name ="date" required value={this.state.comments.date} onChange={this.handleChange}/>
+					</div>
 
-				<label htmlFor="date">Meeting Date</label>
-				<input type="text" name ="date" value={this.state.comments.date} onChange={this.handleChange}/>
+					<div className="inputContainer">
+						<label htmlFor="issue">Issue Area</label>
+						<select type="select" name ="issue" value={this.state.comments.issue} onChange={this.handleChange}>
+							<option value="default" defaultValue>Choose one</option>
+							<option value="Arts & Culture">Arts & Culture</option>
+							<option value="Education">Education</option>
+							<option value="Environment & Energy">Environment & Energy</option>
+							<option value="Health">Health</option>
+							<option value="Immigration">Immigration</option>
+							<option value="Parks & Forestry">Parks & Forestry</option>
+							<option value="Transit">Transit</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+				</div>
 
-				<label htmlFor="issue">Issue Area</label>
-				<select type="select" name ="issue" value={this.state.comments.issue} onChange={this.handleChange}>
-					<option value="issue1" defaultValue>Arts & Culture</option>
-					<option value="issue2">Education</option>
-					<option value="issue3">Environment & Energy</option> 
-					<option value="issue4">Health</option>
-					<option value="issue5">Parks & Forestry</option>
-					<option value="issue6">Transit</option>
-					<option value="issue7">Other</option>
-				</select>
+				<div className="formRow">
+					<div className="inputContainer">
+						<label htmlFor="name">Name</label>
+						<input type="text" name ="name" placeholder="Your name" value={this.state.comments.name} onChange={this.handleChange}/>
+					</div>
 
-				<label htmlFor="name"></label>
-				<input type="text" name ="name" placeholder="Your name" value={this.state.comments.name} onChange={this.handleChange}/>
+					<div className="inputContainer">
+						<label htmlFor="group">Group</label>
+						<input type="text" name ="group" required value={this.state.comments.group} placeholder="What group do you represent?" onChange={this.handleChange}/>
+					</div>
+				</div>
 
-				<label htmlFor="group"></label>
-				<input type="text" name ="group" value={this.state.comments.group} placeholder="What group do you represent?" onChange={this.handleChange}/>
-
-				<label htmlFor="notes"></label>
-				<textarea name ="notes" value={this.state.comments.notes} placeholder="Meeting details/notes" onChange={this.handleChange}/>
-
-				<input type="submit" value="Submit meeting"/>
+				<div className="notesContainer">
+					<label htmlFor="notes">Meeting Notes</label>
+					<textarea rows="12" name ="notes" required value={this.state.comments.notes} placeholder="Add details and notes from your meeting here" onChange={this.handleChange}/>
+				</div>
+				<div className="submitContainer">
+					<input type="submit" value="Submit"/>
+				</div>
 			</form>
 		)
 	}
-
 	}
 
 

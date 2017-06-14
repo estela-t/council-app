@@ -1,67 +1,14 @@
 @import 'setup';
 @import 'variables';
 @import 'mixins';
+@import 'form';
+@import 'header';
+@import 'meetings';
+@import 'footer';
 
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
-}
-
-// HEADER ****
-header {
-	height: 100vh;
-	display: flex;
-	// justify-content: space-around;
-	flex-direction: column;
-	align-items: center;
-	background-image: url("/public/assets/city-hall.svg");
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	h1 {
-		font-family: $bodyFont;
-		font-weight: 700;
-		font-size: 50px;
-		background: white;
-		padding: 10px;
-		border: 10px solid $mainBlue;
-		margin-top: 200px;
-		// text-shadow: 3px 3px 0 $secondaryBlue;
-		box-shadow: 5px 5px 0 $secondaryBlue;
-	}
-	.navContainer {
-		display: flex;
-		flex-direction: row;
-		width: 50%;
-		justify-content: space-around;
-		.nav {
-			padding: 15px 20px;
-			font-family: $bodyFont;
-			text-transform: uppercase;
-			border: 5px dashed $mainRed;
-			background: white;
-			transition: all 0.3s ease;
-			margin-top: 150px;
-			
-			&:hover {
-				border: 5px solid $mainRed;
-				background: $mainRed;
-			
-			}
-			&:hover a {
-				color: white;
-			}
-			a {
-				text-decoration: none;
-				color: $mainRed;
-				font-weight: 700;
-				letter-spacing: 1px;
-				padding: 15px 10px;
-				cursor: pointer;
-			}
-		}
-	}
-
 }
 
 // MAIN ****
@@ -72,7 +19,7 @@ header {
  	}
  	.mapContainer {
  		.map {
-			width: 60%;
+			max-width: 90%;
 			display: block;
 			margin: 0 auto;
  		}
@@ -87,79 +34,64 @@ header {
 	border: none;
 	border: 3px solid $secondaryBlue;
 	background: white;
-}
-
-// COUNCILLOR DETAILS ****
-
-.councillorContact {
-	h3 {
-		@include headingStyle (18px);
+	&:hover {
+		box-shadow: 3px 3px 0 $mainBlue;
 	}
-	p {
-		font-family: $bodyFont;
-		text-transform: uppercase;
-		font-size: 14px;
-		i {
-			margin-right: 10px;
-		}
+	&:hover span {
+		color: $mainRed;
 	}
 }
 
-// FORM ****
-.meetingForm {
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-	padding: 40px 30px;
-	label {
-		font-family: $bodyFont;
-		text-transform: uppercase;
-		font-size: 12px;
-	}
-
-	input [type=submit] {
-		background: linear-gradient(var(--gradientAngle), var(--gradientStart),var(--gradientStop));
-		--gradientAngle: 60deg;
-		--gradientStart: $mainBlue;
-		--gradientStop: $secondaryBlue;
-		&:hover {
-			--gradientAngle: 0deg;
-		}
-	}
-}
-
-// FOOTER ****
-
-footer {
-	margin-top: 100px;
-	background-color: $mainBlue;
-	color: white;
-	font-family: $bodyFont;
-	font-size: 16px;
-	letter-spacing: 1px;
-	font-weight: 500;
+// COUNCILLOR PAGE ****
+.councillorSection {
 	display: flex;
-	.wrapper {
-		display: flex;
-		justify-content: space-between;
-		a {
-			cursor: pointer;
-			margin-top: 14px;
+	justify-content: space-between;
+	margin-top: 50px;
+	width: 90%;
+	margin: 50px auto 0 auto;
+}
+.councillorDetails {
+	padding: 10px;
+	width: 50%;
+	.councillorContact {
+		h3 {
+			@include headingStyle (18px);
 		}
-		span {
-			text-align: right;
-			display: block;
+		p {
+			font-family: $bodyFont;
+			text-transform: uppercase;
+			font-size: 14px;
 			i {
-				text-align: right;
-				font-size: 24px;
-				margin-left: 10px;
+				margin-right: 10px;
 			}
 		}
-		.attribution {
-			border-top: 1px solid white;
-			font-size: 12px;
-			padding-top: 15px;
-			margin-top: 0;
-		}
 	}
 }
 
-// font-family: 'Heebo', sans-serif;
+
+
+// MEDIA QUERIES ****
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.councillorSection {
+		flex-direction: column;
+	}
+	.councillorDetails {
+		display: flex;
+		width: 90%;
+		margin-bottom: 50px;
+	.councillorContact {
+		margin-left: 15px;
+	}
+}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}

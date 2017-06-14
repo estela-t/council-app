@@ -16,3 +16,11 @@
 		bottom: -10%;
 	}
 }
+
+
+@mixin formType ($font-size) {
+	font-family: $bodyFont;
+	text-transform: uppercase;
+	font-size: $font-size;
+	color: #708090;
+}
