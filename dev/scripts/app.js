@@ -28,7 +28,6 @@ class CouncilList extends React.Component {
 		// fetch councillor objects from Firebase with their unique IDs
 		dbRef.on("value", (snapshot) => {
 			const dbCouncil = snapshot.val();
-			// console.log(dbCouncil);
 			let councilArray = [];
 			// for in over full list to return individual councillor IDs
 			for (let key in dbCouncil) {
@@ -40,21 +39,19 @@ class CouncilList extends React.Component {
 			this.setState({
 				councillors: sortedCouncil
 			});
-			// console.log(this.state);
 		});
 	}
 	scrollToElement() {
-		scroll.scrollTo('ScrollElement', {
+		scroller.scrollTo('scrollElement', {
 			duration: 1500,
 			delay: 100,
 			smooth: true,
-			containerId: 'ContainerElementID'
+			containerId: 'scrollContainer'
 		});
 	}
 
 	render(){
 		let list = this.state.councillors.map((singleCouncil, index) => {
-			// console.log(singleCouncil.District_ID);
 			return (
 				<Link to={`/councillor/${singleCouncil.District_ID}`} key={`councillor-${index}`}>
 					<button key={singleCouncil.First_name} className="councillorButton"><span>{singleCouncil.District_ID}</span> - {singleCouncil.First_name} {singleCouncil.Last_name}</button>
@@ -67,19 +64,22 @@ class CouncilList extends React.Component {
 				<img src="public/assets/city-hall.svg" alt=""/>
 					<h1>City Council Meet</h1>
 					<div className="navContainer">
-						<button onClick={this.scrollToElement} className="nav"><a href="#main">Find Your Councillor</a></button>
-						<button className="nav"><a href="http://app.toronto.ca/tmmis/meetingCalendarView.do?function=meetingCalendarView" target="_blank">Upcoming Council Meetings</a></button>
+						<button className="nav"><a href="#main" onClick={this.scrollToElement} >I'm meeting with a councillor</a></button>
 					</div>
 			</header>
-			<Element className="scrollElement">
+			<Element name="scrollElement" id="scrollContainer">
 			<main id="main" >
 				<div className="wrapper">
+					<p className="intro firstLine">City Council Meet keeps track of meetings between city councillors and their constituents on issues that matter to them.</p> <p className="intro">Is an organization that you belong to planning to meet with a councillor regarding public transit? Housing shortages? Urban sustainability? Go into your meeting with a strategy. Click on the councillor's name below to view any meetings they have had with other groups about the topic you will be meeting about. You will also have the option to fill out a form with the details of your own meeting, for other groups to access in the future. </p>
 					<h2>Toronto Wards</h2>
+					<p className="mapSubtitle">Unsure what the ward boundaries are? Check <a href="http://www1.toronto.ca/City%20Of%20Toronto/Toronto%20Building/Shared%20Content/Images/Ward%20Images/torontoWard_1540x1140.jpg" target="_blank">here</a>.</p>
 					<div className="mapContainer">
 						<img src="/public/assets/ward-map.svg" className="map" alt="map of toronto wards"/>
 					</div>
 					<h2>Select your councillor</h2>
+					<div className="buttonsContainer">
 					{ list }
+					</div>
 				</div>
 			</main>
 			</Element>
@@ -142,13 +142,6 @@ class CouncillorDetails extends React.Component {
 						{websiteButton()} {twitterButton()}
 					</div>
 				</div>
-					{/*<div className="twitterTimeline">
-						<Timeline
-							dataSource = {{
-								sourceType: "url",
-								url: {this.state.councillor.Twitter}
-							}}
-					</div>*/}
 				<Form comments={this.state.comments} councillor={this.state.councillor} commentList={this.state.commentList}/>
 				</section>
 				<div className="recentMeetings">
@@ -165,7 +158,6 @@ class CouncillorDetails extends React.Component {
 					})}
 					</ul>
 				</div>
-
 				<Footer />
 			</div>
 		)

@@ -1,0 +1,681 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.meetingForm {
+  -webkit-box-shadow: 0 0 3px 0 #6bcbe4;
+  box-shadow: 0 0 3px 0 #6bcbe4;
+  padding: 30px 20px;
+  width: 50%;
+  margin: 0 auto; }
+  .meetingForm .formRow {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .meetingForm .inputContainer {
+    margin: 5px;
+    width: 50%; }
+    .meetingForm .inputContainer label {
+      font-family: "Overpass", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #708090;
+      display: block; }
+    .meetingForm .inputContainer input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #6bcbe4;
+      text-align: center; }
+      .meetingForm .inputContainer input::-webkit-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer input::-moz-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer input:-ms-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer input::placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+    .meetingForm .inputContainer select {
+      width: 100%;
+      border: 1px solid transparent;
+      padding: 10px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      background: white;
+      border: 2px solid #6bcbe4;
+      text-align: center; }
+      .meetingForm .inputContainer select::-webkit-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer select::-moz-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer select:-ms-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .inputContainer select::placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+  .meetingForm .notesContainer {
+    width: 100%;
+    margin-top: 20px; }
+    .meetingForm .notesContainer textarea {
+      width: 100%;
+      height: 100%; }
+      .meetingForm .notesContainer textarea::-webkit-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .notesContainer textarea::-moz-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .notesContainer textarea:-ms-input-placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+      .meetingForm .notesContainer textarea::placeholder {
+        font-family: "Overpass", sans-serif;
+        font-size: 12px; }
+    .meetingForm .notesContainer label {
+      font-family: "Overpass", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #708090;
+      display: block; }
+  .meetingForm input[type="date"] {
+    border: 2px solid #6bcbe4; }
+    .meetingForm input[type="date"]::-webkit-inner-spin-button {
+      display: none; }
+    .meetingForm input[type="date"]::-webkit-calendar-picker-indicator {
+      background: #6bcbe4; }
+  .meetingForm .submitContainer {
+    text-align: center; }
+    .meetingForm .submitContainer input[type="submit"] {
+      margin-top: 15px;
+      text-align: center;
+      width: 30%;
+      padding: 10px;
+      border: 3px solid #6bcbe4;
+      cursor: cell;
+      font-family: "Overpass", sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #708090;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: white;
+      background: -webkit-gradient(linear, left top, left bottom, from(var(--gradientAngle)), color-stop(var(--gradientStart)), to(var(--gradientStop)));
+      background: -webkit-linear-gradient(var(--gradientAngle), var(--gradientStart), var(--gradientStop));
+      background: -o-linear-gradient(var(--gradientAngle), var(--gradientStart), var(--gradientStop));
+      background: linear-gradient(var(--gradientAngle), var(--gradientStart), var(--gradientStop));
+      --gradientAngle: 60deg;
+      --gradientStart: #0951bc;
+      --gradientStop: #6bcbe4;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .meetingForm .submitContainer input[type="submit"]:hover {
+        --gradientAngle: 0deg; }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .meetingForm .formRow {
+    display: block; }
+  .meetingForm .inputContainer {
+    margin: 5px;
+    width: 100%; }
+    .meetingForm .inputContainer input {
+      width: 100%; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .meetingForm {
+    width: 90%; }
+    .meetingForm .formRow {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+    .meetingForm .inputContainer {
+      width: 50%; }
+      .meetingForm .inputContainer input {
+        width: 100%; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .meetingForm {
+    width: 90%; }
+    .meetingForm .formRow {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .meetingForm .inputContainer {
+      width: 100%; }
+      .meetingForm .inputContainer input {
+        width: 100%; } }
+
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url("/public/assets/toronto.jpg");
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/public/assets/toronto.jpg");
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/public/assets/toronto.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/public/assets/toronto.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  header img {
+    display: inline-block;
+    -webkit-align-self: left;
+    -ms-flex-item-align: left;
+    align-self: left;
+    width: 10%;
+    min-width: 80px; }
+  header h1 {
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    background: white;
+    padding: 10px;
+    border: 10px solid #0951bc;
+    margin: 0 0 50px 0;
+    -webkit-box-shadow: 5px 5px 0 #6bcbe4;
+    box-shadow: 5px 5px 0 #6bcbe4; }
+  header .navContainer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 50%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 0 50px 0; }
+    header .navContainer .nav {
+      padding: 15px 20px;
+      margin: 10px;
+      font-family: "Overpass", sans-serif;
+      text-transform: uppercase;
+      border: 5px solid #DC143C;
+      background: white;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      header .navContainer .nav:hover {
+        border: 5px solid #DC143C;
+        background: #DC143C; }
+      header .navContainer .nav:hover a {
+        color: white; }
+      header .navContainer .nav a {
+        text-decoration: none;
+        color: #DC143C;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 15px 10px;
+        cursor: cell; }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  header .navContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    header .navContainer .nav {
+      width: 80%; }
+  header h1 {
+    font-size: 40px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  header .navContainer {
+    width: 65%; } }
+
+.recentMeetings {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  margin-top: 100px; }
+  .recentMeetings:before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100px;
+    background: #0951bc;
+    position: absolute;
+    top: -10%;
+    left: calc(50% - 100px); }
+  .recentMeetings h3 {
+    font-family: "Overpass", sans-serif;
+    font-size: 18px;
+    color: #0951bc;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px; }
+  .recentMeetings ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
+    width: 90%; }
+    .recentMeetings ul i {
+      font-size: 26px; }
+    .recentMeetings ul li {
+      width: calc(50% - 10px);
+      margin: 10px;
+      font-family: "Overpass", sans-serif;
+      font-size: 14px; }
+      .recentMeetings ul li .issueArea {
+        font-size: 18px;
+        color: #0951bc;
+        padding-left: 5px; }
+      .recentMeetings ul li .postingGroup {
+        text-decoration: underline;
+        font-weight: 500; }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .recentMeetings:before {
+    top: -5%;
+    left: calc(50% - 50px); }
+  .recentMeetings ul li {
+    width: calc(50% - 10px);
+    margin: 10px;
+    font-family: "Overpass", sans-serif;
+    font-size: 14px; } }
+
+/* Landscape phones and down */
+footer {
+  margin-top: 100px;
+  background-color: #0951bc;
+  color: white;
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  footer .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    footer .wrapper a#toTop {
+      cursor: pointer;
+      margin: 14px 10px 0 10px;
+      width: 15%;
+      text-align: right; }
+      footer .wrapper a#toTop:hover {
+        text-shadow: 2px 2px 0 #6bcbe4; }
+    footer .wrapper .footerColumn {
+      width: 85%; }
+      footer .wrapper .footerColumn .makerContainer {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: no-wrap;
+        -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      footer .wrapper .footerColumn span a {
+        font-size: 26px;
+        color: white;
+        margin-left: 10px; }
+        footer .wrapper .footerColumn span a:hover {
+          text-shadow: 2px 2px 0 #6bcbe4; }
+      footer .wrapper .footerColumn .attribution {
+        border-top: 1px solid white;
+        font-size: 12px;
+        padding-top: 15px;
+        margin-top: 0; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+main p {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 0; }
+
+main .firstLine {
+  font-size: 22px;
+  color: #0951bc;
+  margin-top: 40px; }
+
+main h2 {
+  font-family: "Overpass", sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  position: relative;
+  margin-top: 100px; }
+  main h2:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 50px;
+    background: #0951bc;
+    position: absolute;
+    bottom: -10%; }
+
+main .mapSubtitle {
+  font-family: "Overpass", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px; }
+  main .mapSubtitle a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid #6bcbe4;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    main .mapSubtitle a:hover {
+      padding-bottom: 3px; }
+
+main .mapContainer .map {
+  max-width: 90%;
+  display: block;
+  margin: 0 auto; }
+
+.councillorButton {
+  font-family: "Overpass", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 5px;
+  border: none;
+  border: 3px solid #6bcbe4;
+  background: white; }
+  .councillorButton:hover {
+    -webkit-box-shadow: 3px 3px 0 #0951bc;
+    box-shadow: 3px 3px 0 #0951bc; }
+  .councillorButton:hover span {
+    color: #DC143C; }
+
+.councillorSection {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 90%;
+  margin: 50px auto 0 auto; }
+
+.councillorDetails {
+  padding: 10px;
+  width: 50%; }
+  .councillorDetails .councillorContact h3 {
+    font-family: "Overpass", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    position: relative; }
+    .councillorDetails .councillorContact h3:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 50px;
+      background: #0951bc;
+      position: absolute;
+      bottom: -10%; }
+  .councillorDetails .councillorContact p {
+    font-family: "Overpass", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px; }
+    .councillorDetails .councillorContact p i {
+      margin-right: 10px; }
+
+/* Portrait tablet and small desktops */
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .councillorSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .councillorDetails {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin-bottom: 50px; }
+    .councillorDetails .councillorContact {
+      margin-left: 15px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  main h2 {
+    font-family: "Overpass", sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    position: relative;
+    margin-top: 80px; }
+    main h2:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 50px;
+      background: #0951bc;
+      position: absolute;
+      bottom: -10%; }
+  main .mapSubtitle {
+    font-size: 18px;
+    margin-bottom: 22px; }
+  main .mapContainer .map {
+    max-width: 100%; }
+  .councillorButton {
+    font-family: "Overpass", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 5px;
+    border: none;
+    border: 3px solid #6bcbe4;
+    background: white; }
+    .councillorButton:hover {
+      -webkit-box-shadow: 3px 3px 0 #0951bc;
+      box-shadow: 3px 3px 0 #0951bc; }
+    .councillorButton:hover span {
+      color: #DC143C; } }
