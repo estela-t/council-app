@@ -50,7 +50,14 @@ footer {
 
 //MEDIA QUERIES ****
 @media (max-width: 530px) {
+	footer {
+		.wrapper {
+			a#toTop {
+				width: 20%;
+			}	
+		}
 	.footerColumn {
+		width: 80%;
 		.makerContainer {
 			display: block;
 			span {
@@ -59,3 +66,5 @@ footer {
 		}
 	}
 }
+}
+

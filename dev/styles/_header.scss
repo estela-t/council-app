@@ -25,6 +25,7 @@ header {
 		border: 10px solid $mainBlue;
 		margin: 0 0 50px 0;
 		box-shadow: 5px 5px 0 $secondaryBlue;
+		text-align: center;
 	}
 	.navContainer {
 		display: flex;
@@ -80,6 +81,10 @@ header {
 		header {
 		.navContainer {
 			width: 80%;
+			h1 {
+				margin: 0 auto;
+				width: 50%;
+			}
 		}
 	}
 
