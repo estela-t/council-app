@@ -5,6 +5,12 @@
 	padding: 30px 20px;
 	width: 50%;
 	margin: 0 auto;
+	p {
+		font-family: $bodyFont;
+		font-size: 14px;
+		font-style: italic;
+		margin-top: 0;
+	}
 	.formRow {
 		display: flex;
 		justify-content: space-around;
@@ -143,6 +149,11 @@
 			width: 100%;
 			input {
 				width: 100%;
+			}
+		}
+		.submitContainer {
+			input[type="submit"] {
+				width: 50%;
 			}
 		}
 	}

@@ -24,7 +24,6 @@ class Form extends React.Component {
 	}
 	handleChange(e) {
 		// setState triggers a re-render.
-		console.log(e.target.value);
 		const comments = Object.assign({}, this.state.comments);
 		comments[e.target.name] = e.target.value;
 		this.setState({comments});
@@ -34,7 +33,6 @@ class Form extends React.Component {
 		const commentsRef = firebase.database().ref(`id_${this.props.councillor.District_ID}/comments`);
 		commentsRef.push(this.state.comments);
 		commentsRef.on("value", (snapshot) => {
-			console.log("hello i'm working: ", snapshot.val());
 		});
 			this.setState({
 				comments: {
@@ -49,6 +47,7 @@ class Form extends React.Component {
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit} className="meetingForm">
+			<p>Enter the details of your meeting:</p>
 				<div className="formRow">
 					<div className="dateContainer inputContainer">
 						<label htmlFor="date">Meeting Date</label>
@@ -95,7 +94,5 @@ class Form extends React.Component {
 	}
 	}
 
-
-// maxlength="50"
 
 export default Form;

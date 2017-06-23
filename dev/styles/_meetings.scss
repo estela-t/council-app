@@ -29,13 +29,13 @@
 		padding: 0;
 		margin: 0;
 		display: flex;
-		flex-wrap: no-wrap;
+		flex-wrap: wrap;
 		width: 90%;
 		i {
 			font-size: 26px;
 		}
 		li {
-			width: calc(50% - 10px);
+			width: calc(33.3% - 20px);
 			margin: 10px;
 			font-family: $bodyFont;
 			font-size: 14px;
@@ -54,34 +54,38 @@
 
 // MEDIA QUERIES ****
 
-/* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-
+	.recentMeetings {
+		ul {
+			li {
+				width: calc(50% - 20px);
+				.postingGroup {
+			}
+		}
+	}
+}
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	.recentMeetings {
 		&:before {
-			top: -5%;
 			left: calc(50% - 50px);
 		}
-		ul {
-			// list-style: none;
-			// padding: 0;
-			// margin: 0;
-			// display: flex;
-			// flex-wrap: no-wrap;
-			li {
-				width: calc(50% - 10px);
-				margin: 10px;
-				font-family: $bodyFont;
-				font-size: 14px;
+			ul {
+				li {
+					width: 100%;
+					.postingGroup {
+				}
 			}
 		}
 	}
 }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
+	.recentMeetings {
+		&:before {
+			left: calc(50% - 50px);
+		}
+
+	}
 }

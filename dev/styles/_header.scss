@@ -61,12 +61,6 @@ header {
 
 // MEDIA QUERIES ****
 
-
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-}
-
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	header {
 		.navContainer {
@@ -79,14 +73,13 @@ header {
 			font-size: 40px;
 		}
 	}
-
 }
 
-/* Landscape phones and down */
+
 @media (max-width: 480px) {
 		header {
 		.navContainer {
-			width: 65%;
+			width: 80%;
 		}
 	}
 

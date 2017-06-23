@@ -72,7 +72,8 @@
 // COUNCILLOR PAGE ****
 .councillorSection {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	margin-top: 50px;
 	width: 90%;
 	margin: 50px auto 0 auto;
@@ -80,6 +81,9 @@
 .councillorDetails {
 	padding: 10px;
 	width: 50%;
+	img {
+		height: auto;
+	}
 	.councillorContact {
 		h3 {
 			@include headingStyle (18px);
@@ -98,28 +102,27 @@
 
 
 // MEDIA QUERIES ****
-
-
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-}
-
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 	.councillorSection {
 		flex-direction: column;
 	}
 	.councillorDetails {
-		display: flex;
 		width: 90%;
 		margin-bottom: 50px;
 	.councillorContact {
+		width: 100%;
 		margin-left: 15px;
+		margin-left: 0;
+		position: relative;
+		h3 {
+		position: absolute;
+		top: -250%;
+		left: 45%;
+		}
 	}
 }
 }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
 	 main {
 	 	h2 {
@@ -136,25 +139,13 @@
 	 		}
 	 	}
 	 }
-	 // .buttonsContainer {
-	 // 	display: flex;
-	 // 	justify-content: space-between;
-	 // 	align-items: center;
-	 // 	background: red;
-		//  .councillorButton {
-		//  	font-family: $bodyFont;
-		//  	font-size: 12px;
-		//  	letter-spacing: 1px;
-		//  	margin: 5px;
-		//  	border: none;
-		//  	border: 3px solid $secondaryBlue;
-		//  	background: white;
-		//  	&:hover {
-		//  		box-shadow: 3px 3px 0 $mainBlue;
-		//  	}
-		//  	&:hover span {
-		//  		color: $mainRed;
-		//  	}
-		//  }
-	 // }
+	 .councillorDetails {
+	 	.councillorContact {
+	 		h3 {
+	 		position: absolute;
+	 		top: -250%;
+	 		left: 55%;
+	 		}
+	 	}
+	 }
 }
