@@ -139,6 +139,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   padding: 30px 20px;
   width: 50%;
   margin: 0 auto; }
+  .meetingForm p {
+    font-family: "Overpass", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 0; }
   .meetingForm .formRow {
     display: -webkit-box;
     display: -webkit-flex;
@@ -298,7 +303,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     .meetingForm .inputContainer {
       width: 100%; }
       .meetingForm .inputContainer input {
-        width: 100%; } }
+        width: 100%; }
+    .meetingForm .submitContainer input[type="submit"] {
+      width: 50%; } }
 
 header {
   height: 100vh;
@@ -342,7 +349,8 @@ header {
     border: 10px solid #0951bc;
     margin: 0 0 50px 0;
     -webkit-box-shadow: 5px 5px 0 #6bcbe4;
-    box-shadow: 5px 5px 0 #6bcbe4; }
+    box-shadow: 5px 5px 0 #6bcbe4;
+    text-align: center; }
   header .navContainer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -381,24 +389,24 @@ header {
         padding: 15px 10px;
         cursor: cell; }
 
-/* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  header .navContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-    header .navContainer .nav {
-      width: 80%; }
+  header .navContainer .nav {
+    width: 80%;
+    margin: 0 auto; }
   header h1 {
     font-size: 40px; } }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
   header .navContainer {
-    width: 65%; } }
+    width: 80%; }
+  header h1 {
+    margin: 0 auto;
+    width: 75%;
+    line-height: 42px; }
+  header img {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; } }
 
 .recentMeetings {
   width: 90%;
@@ -430,14 +438,14 @@ header {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: no-wrap;
-    -ms-flex-wrap: no-wrap;
-    flex-wrap: no-wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 90%; }
     .recentMeetings ul i {
       font-size: 26px; }
     .recentMeetings ul li {
-      width: calc(50% - 10px);
+      width: calc(33.3% - 20px);
       margin: 10px;
       font-family: "Overpass", sans-serif;
       font-size: 14px; }
@@ -449,19 +457,20 @@ header {
         text-decoration: underline;
         font-weight: 500; }
 
-/* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
+@media (max-width: 940px) {
+  .recentMeetings ul li {
+    width: calc(50% - 20px); } }
+
 @media (max-width: 768px) {
   .recentMeetings:before {
-    top: -5%;
     left: calc(50% - 50px); }
   .recentMeetings ul li {
-    width: calc(50% - 10px);
-    margin: 10px;
-    font-family: "Overpass", sans-serif;
-    font-size: 14px; } }
+    width: 100%; } }
 
-/* Landscape phones and down */
+@media (max-width: 480px) {
+  .recentMeetings:before {
+    left: calc(50% - 50px); } }
+
 footer {
   margin-top: 100px;
   background-color: #0951bc;
@@ -497,9 +506,9 @@ footer {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: no-wrap;
-        -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
@@ -519,6 +528,16 @@ footer {
         font-size: 12px;
         padding-top: 15px;
         margin-top: 0; }
+
+@media (max-width: 530px) {
+  footer .wrapper a#toTop {
+    width: 20%; }
+  footer .footerColumn {
+    width: 80%; }
+    footer .footerColumn .makerContainer {
+      display: block; }
+      footer .footerColumn .makerContainer span {
+        display: block; } }
 
 .wrapper {
   width: 90%;
@@ -591,10 +610,12 @@ main .mapContainer .map {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   margin-top: 50px;
   width: 90%;
   margin: 50px auto 0 auto; }
@@ -602,6 +623,8 @@ main .mapContainer .map {
 .councillorDetails {
   padding: 10px;
   width: 50%; }
+  .councillorDetails img {
+    height: auto; }
   .councillorDetails .councillorContact h3 {
     font-family: "Overpass", sans-serif;
     font-size: 18px;
@@ -620,12 +643,11 @@ main .mapContainer .map {
   .councillorDetails .councillorContact p {
     font-family: "Overpass", sans-serif;
     text-transform: uppercase;
-    font-size: 14px; }
+    font-size: 14px;
+    margin: 5px auto; }
     .councillorDetails .councillorContact p i {
       margin-right: 10px; }
 
-/* Portrait tablet and small desktops */
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .councillorSection {
     -webkit-box-orient: vertical;
@@ -634,16 +656,18 @@ main .mapContainer .map {
     -ms-flex-direction: column;
     flex-direction: column; }
   .councillorDetails {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     width: 90%;
     margin-bottom: 50px; }
     .councillorDetails .councillorContact {
-      margin-left: 15px; } }
+      width: 100%;
+      margin-left: 15px;
+      margin-left: 0;
+      position: relative; }
+      .councillorDetails .councillorContact h3 {
+        position: absolute;
+        top: -250%;
+        left: 45%; } }
 
-/* Landscape phones and down */
 @media (max-width: 480px) {
   main h2 {
     font-family: "Overpass", sans-serif;
@@ -666,16 +690,7 @@ main .mapContainer .map {
     margin-bottom: 22px; }
   main .mapContainer .map {
     max-width: 100%; }
-  .councillorButton {
-    font-family: "Overpass", sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    margin: 5px;
-    border: none;
-    border: 3px solid #6bcbe4;
-    background: white; }
-    .councillorButton:hover {
-      -webkit-box-shadow: 3px 3px 0 #0951bc;
-      box-shadow: 3px 3px 0 #0951bc; }
-    .councillorButton:hover span {
-      color: #DC143C; } }
+  .councillorDetails .councillorContact h3 {
+    position: absolute;
+    top: -220px;
+    left: 180px; } }

@@ -65,9 +65,9 @@ header {
 @media (max-width: 768px) {
 	header {
 		.navContainer {
-			flex-direction: column;
 			.nav {
 				width: 80%;
+				margin: 0 auto;
 			}
 		}
 		h1 {
@@ -81,11 +81,14 @@ header {
 		header {
 		.navContainer {
 			width: 80%;
+		}
 			h1 {
 				margin: 0 auto;
-				width: 50%;
+				width: 75%;
+				line-height: 42px;
 			}
+			img {
+				align-self: center;
 		}
 	}
-
 }
